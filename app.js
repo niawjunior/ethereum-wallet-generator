@@ -7,11 +7,10 @@ gen=()=> {
     return web3.eth.accounts.create();
 }
 
-app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.status(200)
     var account = gen();
     var public_key = account.address;
     var private_key = account.privateKey;
@@ -20,7 +19,6 @@ app.get('/', (req, res) => {
         private_key
     });
 });
-
 app.listen(3000, () => {
     console.log('Server Listening on http://localhost:3000/');
 });
