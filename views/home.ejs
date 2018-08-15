@@ -1,8 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ethereum Wallet Generator</title>
 <link rel="stylesheet" href="home.css">
-<div class="container mt-5">
-    <form id="gen" class="text-center">
+    <form id="gen" class="container mt-5 text-center">
         <h1>Ethereum Wallet Generator</h1>
         <p style="word-wrap: break-word;">Public Key:
             <%= public_key %>
@@ -12,8 +11,6 @@
         </p>
         <button id="gen" class="btn btn-primary">Create Account</button>
     </form>
-</div>
-
 <script>
     document.querySelector("#gen").addEventListener("click", e => {
         e.preventDefault();
